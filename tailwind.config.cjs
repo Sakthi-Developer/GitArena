@@ -1,0 +1,96 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['./index.html', './src/**/*.{ts,tsx}'],
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        arena: {
+          bg: '#0a0e17',
+          surface: '#111827',
+          surfaceHover: '#1a2235',
+          border: '#1e293b',
+          borderHover: '#334155',
+          text: '#e2e8f0',
+          textMuted: '#94a3b8',
+          textDim: '#64748b',
+          accent: '#6366f1',
+          accentHover: '#818cf8',
+          accentDim: '#4338ca',
+          success: '#22c55e',
+          warning: '#f59e0b',
+          error: '#ef4444',
+          branch1: '#6366f1',
+          branch2: '#22c55e',
+          branch3: '#f59e0b',
+          branch4: '#ec4899',
+          branch5: '#06b6d4',
+          branch6: '#f97316',
+        },
+      },
+      fontFamily: {
+        sans: [
+          'Inter',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'Roboto',
+          'sans-serif',
+        ],
+        mono: [
+          'JetBrains Mono',
+          'Fira Code',
+          'SF Mono',
+          'Consolas',
+          'monospace',
+        ],
+      },
+      spacing: {
+        '0.5': '4px',
+        '1': '8px',
+        '1.5': '12px',
+        '2': '16px',
+        '3': '24px',
+        '4': '32px',
+        '5': '40px',
+        '6': '48px',
+        '8': '64px',
+        '10': '80px',
+        '12': '96px',
+      },
+      borderRadius: {
+        sm: '6px',
+        DEFAULT: '8px',
+        md: '10px',
+        lg: '12px',
+        xl: '16px',
+        '2xl': '20px',
+      },
+      animation: {
+        'fade-in': 'fadeIn 200ms ease-out',
+        'slide-up': 'slideUp 300ms cubic-bezier(0.16, 1, 0.3, 1)',
+        'scale-in': 'scaleIn 200ms cubic-bezier(0.16, 1, 0.3, 1)',
+        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+      },
+      keyframes: {
+        fadeIn: {
+          from: { opacity: '0' },
+          to: { opacity: '1' },
+        },
+        slideUp: {
+          from: { opacity: '0', transform: 'translateY(8px)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
+        },
+        scaleIn: {
+          from: { opacity: '0', transform: 'scale(0.95)' },
+          to: { opacity: '1', transform: 'scale(1)' },
+        },
+        pulseGlow: {
+          '0%, 100%': { boxShadow: '0 0 0 0 rgba(99,102,241,0.4)' },
+          '50%': { boxShadow: '0 0 0 8px rgba(99,102,241,0)' },
+        },
+      },
+    },
+  },
+  plugins: [],
+};
